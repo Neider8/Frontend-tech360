@@ -1,5 +1,5 @@
 import React from 'react';
-import RegisterForm from './components/1_Registro/1_Registro/RegisterForm';
+import RegisterForm from './components/Pages/RegisterForm';
 
 
 

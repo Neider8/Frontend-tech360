@@ -4,8 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
-import LoginForm from './components/1_Registro/2_Login/LoginForm';
-import RecoverPassword from './components/1_Registro/3_RecoverPassword/RecoverPassword';
+import LoginForm from './components/Pages/LoginForm';
+import RecoverPassword from './components/Pages/RecoverPassword';
 
 
 
