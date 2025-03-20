@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import App from './App';
 import LoginForm from './components/1_Registro/2_Login/LoginForm';
 import RecoverPassword from './components/1_Registro/3_RecoverPassword/RecoverPassword';
+
 
 
 
@@ -19,8 +20,7 @@ root.render(
       <LoginForm/>
       <RecoverPassword/>
       
-      
-
+  
   </React.StrictMode>
 );
 
