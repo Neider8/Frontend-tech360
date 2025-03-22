@@ -4,8 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
-import LoginForm from './components/Pages/LoginForm';
-import RecoverPassword from './components/Pages/RecoverPassword';
+
 
 
 
@@ -17,10 +16,7 @@ root.render(
   <React.StrictMode>
    
       <App/>
-      <LoginForm/>
-      <RecoverPassword/>
       
-  
   </React.StrictMode>
 );
 
