@@ -1,154 +1,169 @@
-/* styles/Login.module.css */
-
-/* Contenedor principal - se adapta al 100% del viewport */
 .loginContainer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    background: #EBEBEB;
-  }
-  
-  /* Sección de la imagen (derecha) - Ocupa mitad de la pantalla */
-  /*
-  .loginImageSection {
-    flex: 1;
-    height: 100%;
-    background: #F6FAFD;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* Imagen responsiva con cubrimiento completo */
-  .loginImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  /* Sección del formulario (izquierda) - Centrado vertical y responsive */
-  .loginFormSection {
-    flex: 1;
-    display: flex;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6fafd;
+  font-family: 'Inter', sans-serif;
+}
+
+.logoSection {
+  flex: 1;
+  background-color: #f6fafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  padding: 2rem;
+}
+
+.formWrapper {
+  max-width: 422px;
+  width: 100%;
+}
+
+.loginTitle {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.loginSubtitle {
+  font-size: 1.25rem;
+  color: #818181;
+  margin-bottom: 2.5rem;
+}
+
+.loginForm {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #818181;
+  font-size: 0.875rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #514ef3;
+  box-shadow: 0 0 0 2px rgba(81, 78, 243, 0.1);
+}
+
+.loginButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #514ef3;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 15px 30px -10px rgba(119, 84, 246, 0.27);
+  margin-top: 1.5rem;
+}
+
+.loginButton:hover {
+  background-color: #413edb;
+}
+
+.forgotPassword {
+  display: block;
+  text-align: right;
+  color: #514ef3;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #818181;
+}
+
+.signupLinkAnchor {
+  color: #514ef3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupLinkAnchor:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .loginContainer {
     flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    max-width: 600px; /* Máximo ancho para mejor legibilidad */
+  }
+
+  .logoSection {
+    padding: 1rem;
+    min-height: 300px;
+  }
+
+  .formSection {
+    padding: 2rem 1rem;
+  }
+
+  .loginTitle {
+    font-size: 2rem;
+  }
+
+  .loginSubtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formWrapper {
+    padding: 0 0.5rem;
+    width: 90%;
     margin: 0 auto;
   }
-  
-  /* Título principal */
-  .loginTitle {
-    color: #000;
-    font-size: 3rem; /* 48px */
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
+
+  .formInput {
+    padding: 0.75rem;
   }
-  
-  /* Subtítulo */
-  .loginSubtitle {
-    color: #000;
-    font-size: 1rem; /* 16px */
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 2.5rem;
-  }
-  
-  /* Contenedor de input con posición relativa para elementos absolutos internos */
-  .inputContainer {
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Estilos comunes para inputs */
-  .loginInput {
-    width: 100%;
-    height: 60px;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #D1D1D1;
-    padding: 1.5rem 1rem 0.5rem; /* Espacio para el label flotante */
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  /* Labels flotantes */
-  .inputLabel {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #818181;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    transition: 0.3s all ease;
-    pointer-events: none;
-  }
-  
-  /* Cuando el input está enfocado o con valor, el label sube */
-  .loginInput:focus + .inputLabel,
-  .loginInput:not(:placeholder-shown) + .inputLabel {
-    top: 30%;
-    font-size: 0.75rem;
-  }
-  
-  /* Botón principal de login */
+
   .loginButton {
-    width: 100%;
-    height: 60px;
-    background: #514EF3;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    box-shadow: 0px 15px 30px -10px rgba(119, 84, 246, 0.27);
+    padding: 0.75rem;
   }
-  
-  .loginButton:hover {
-    transform: translateY(-2px);
-  }
-  
-  /* Enlace "Olvidé contraseña" */
-  .forgotPassword {
-    color: #514EF3;
-    text-align: right;
-    margin: 1rem 0;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  /* Texto de registro */
-  .registerText {
-    text-align: center;
-    margin-top: 2rem;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .registerText span {
-    color: #818181;
-    margin-right: 0.5rem;
-  }
-  
-  /* Media Queries para responsive design */
-  @media (max-width: 768px) {
-    .loginContainer {
-      flex-direction: column;
-    }
-    
-    .loginImageSection {
-      height: 40vh; /* Altura reducida en móviles */
-    }
-    
-    .loginFormSection {
-      padding: 1.5rem;
-      justify-content: flex-start;
-    }
-    
-    .loginTitle {
-      font-size: 2rem; /* Título más pequeño en móviles */
-    }
-  }
+}

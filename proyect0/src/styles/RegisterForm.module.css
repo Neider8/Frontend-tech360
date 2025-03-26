@@ -1,0 +1,175 @@
+.registerContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f6fafd;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .logoSection {
+    flex: 1;
+    background-color: #f6fafd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  
+  .logoImage {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  .formSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+    padding: 4rem 2rem;
+  }
+  
+  .formContent {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .registerTitle {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+  
+  .registerSubtitle {
+    font-size: 1.25rem;
+    color: #818181;
+    margin-bottom: 2.5rem;
+  }
+  
+  .registerForm {
+    width: 100%;
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inputLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #818181;
+    font-size: 0.875rem;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formInput:focus {
+    outline: none;
+    border-color: #514ef3;
+    box-shadow: 0 0 0 2px rgba(81, 78, 243, 0.1);
+  }
+  
+  .registerButton {
+    width: 100%;
+    padding: 1rem;
+    background-color: #514ef3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 15px 30px -10px rgba(119, 84, 246, 0.27);
+    margin-top: 1rem;
+  }
+  
+  .registerButton:hover {
+    background-color: #413edb;
+  }
+  
+  .loginLink {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #818181;
+  }
+  
+  .loginLinkAnchor {
+    color: #514ef3;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .loginLinkAnchor:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .formSection {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .registerContainer {
+      flex-direction: column;
+    }
+  
+    .logoSection {
+      padding: 2rem;
+      min-height: 300px;
+    }
+  
+    .formContent {
+      max-width: 100%;
+    }
+  
+    .registerTitle {
+      font-size: 2rem;
+    }
+  
+    .registerSubtitle {
+      font-size: 1rem;
+    }
+  
+    .formGrid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logoSection {
+      padding: 1rem;
+    }
+  
+    .formSection {
+      padding: 1.5rem;
+    }
+  
+    .formInput {
+      padding: 0.875rem;
+    }
+  
+    .registerButton {
+      padding: 0.875rem;
+    }
+  }

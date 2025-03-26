@@ -1,22 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import RegisterForm from "./components/RegisterForm";
-import RecoverPassword from "./components/RecoverPassword";
-import NewPassword from "./components/NewPassword";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/auth/Login';
+import RegisterForm from './components/auth/RegisterForm';
+import RecoverPassword from './components/auth/RecoverPassword';
+import NewPassword from './components/auth/NewPassword';
+import Dashboard from './components/dashboard/Dashboard';
 
-const App = () => {
+
+function App() {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<RegisterForm />} />
-        <Route path="/recover-password" element={<RecoverPassword />} />
-        <Route path="/new-password" element={<NewPassword />} />
-        <Route path="/" element={<Login />} /> // Ruta por defecto
+        <Route path="/registro" element={<RegisterForm />} />
+        <Route path="/recuperar-contrasena" element={<RecoverPassword />} />
+        <Route path="/nueva-contrasena" element={<NewPassword />} />
+        
+          <Route path="/dashboard" element={<Dashboard />} />
+        
+        <Route path="*" element={<Login />} />
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
